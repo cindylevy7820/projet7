@@ -49,7 +49,7 @@ def interpret_score(score):
 def load_predictions_API(sample, id, clf):
     X = sample.iloc[:, :-1]
     data = X[X.index == int(id)].to_dict(orient='records')
-    response = requests.post('https://github.com/cindylevy7820/projet7/blob/main/app.py/predict', json=data)
+    response = requests.post('/predict', json=data)
     predictions = response.json()['predictions']
     return predictions[0]
 
