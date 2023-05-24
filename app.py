@@ -24,4 +24,4 @@ def predict():
     return jsonify(response)
 
 if __name__ == '__main__':
-    app.run()
+    app.run(port="https://github.com/cindylevy7820/projet7/edit/main/appCindy.py/api/")
