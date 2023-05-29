@@ -67,7 +67,7 @@ def main():
     st.write(header, unsafe_allow_html=True)
     
     # Probabilité remboursement et interprétation
-    prediction = prediction = load_predictions_API(sample, client_choice, model)
+    prediction = load_predictions_API(sample, client_choice, model)
     st.write("<B><h5>Probabilité de faillite du client {} est de : {:.0f} % </B></h5>".format(client_choice, round(float(prediction)*100, 2)), unsafe_allow_html=True)
     st.write("<p>{}</p>".format(interpret_score(prediction)), unsafe_allow_html=True)
     
