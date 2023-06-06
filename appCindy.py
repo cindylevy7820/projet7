@@ -37,7 +37,7 @@ def models():
     return prediction
 
 model = models()
-    
+    /app.py
 def interpret_score(score):
     if score >= 0.7:
         return "Le client présente un risque élevé de faillite."
@@ -49,7 +49,7 @@ def interpret_score(score):
 def load_predictions_API(sample, id, clf):
     X = sample.iloc[:, :-1]
     data = X[X.index == int(id)].to_dict(orient='records')    
-    response = requests.post('https://cindylevy7820-projet7-appcindy-vmvj8w.streamlit.app', json=data)    
+    response = requests.post('https://cindylevy7820-projet7-appcindy-vmvj8w.streamlit.app/app.py', json=data)    
     print("Print response :", response)
     predictions = response.json()['predictions']
     return predictions[0]
