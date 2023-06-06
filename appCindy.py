@@ -37,7 +37,6 @@ def models():
     return prediction
 
 model = models()
-    /app.py
 def interpret_score(score):
     if score >= 0.7:
         return "Le client présente un risque élevé de faillite."
